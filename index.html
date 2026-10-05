@@ -1,308 +1,386 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="mr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kad Multiplier (कड मल्टीप्लायर) - Organic Soil Conditioner</title>
+    <title>कड मल्टीप्लायर | Kad Multiplier</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         emerald: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            600: '#059669',
-                            700: '#047857',
-                            800: '#065f46',
-                            900: '#064e3b',
+                            850: '#064e3b',
+                            900: '#022c22',
                         },
                         amber: {
-                            500: '#f59e0b',
-                            600: '#d97706',
+                            450: '#f59e0b',
+                            500: '#d97706',
                         }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind Rajdhani', 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #022c22 0%, #064e3b 60%, #0f5132 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+        }
+        .gold-border {
+            border-color: #f59e0b;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans pb-20 md:pb-0">
+<body class="bg-slate-50 text-slate-800 pb-20 md:pb-0">
 
-    <!-- TOP NAVIGATION BAR -->
-    <nav class="bg-emerald-900 text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <i class="fa-solid font-bold text-amber-400 text-2xl fa-seedling"></i>
+    <header class="sticky top-0 z-50 bg-emerald-900/95 backdrop-blur-md text-white shadow-lg border-b border-emerald-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-emerald-950 font-bold text-xl shadow-md">
+                    क
+                </div>
                 <div>
-                    <h1 class="text-xl font-bold tracking-wide text-white">कड मल्टीप्लायर</h1>
-                    <p class="text-xs text-amber-300">Kad Multiplier - Bio-Stimulant</p>
+                    <h1 class="text-xl md:text-2xl font-bold tracking-tight text-amber-400">कड मल्टीप्लायर</h1>
+                    <p class="text-xs text-emerald-200 hidden sm:block">Kad Multiplier - 100% सेंद्रिय शेती सोल्यूशन</p>
                 </div>
             </div>
-            
-            <div class="flex items-center space-x-3">
+
+            <div class="flex items-center gap-3">
                 <!-- Language Toggle Button -->
-                <button onclick="toggleLanguage()" id="langBtn" class="bg-emerald-700 hover:bg-emerald-600 text-white text-xs px-3 py-1.5 rounded-full border border-emerald-500 font-semibold transition">
-                    🌐 English
+                <button onclick="toggleLanguage()" id="lang-btn" class="px-3 py-1.5 rounded-lg border border-amber-400/40 text-amber-300 hover:bg-emerald-800 transition text-sm font-semibold flex items-center gap-2">
+                    <i class="fa-solid font-bold fa-language text-lg"></i>
+                    <span id="lang-btn-text">English</span>
                 </button>
-                <a href="tel:9673653056" class="hidden md:inline-flex items-center bg-amber-500 hover:bg-amber-600 text-emerald-950 px-4 py-2 rounded-lg font-bold text-sm transition">
-                    <i class="fa-solid fa-phone mr-2"></i> 9673653056
+                
+                <!-- Direct Call Button Header -->
+                <a href="tel:+919673653056" class="hidden md:flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold px-4 py-2 rounded-xl transition shadow-md text-sm">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 9673653056</span>
                 </a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- HERO SECTION -->
-    <section class="bg-gradient-to-b from-emerald-900 via-emerald-800 to-emerald-900 text-white py-12 px-4 relative overflow-hidden">
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <span class="bg-amber-500 text-emerald-950 font-bold text-xs uppercase px-3 py-1 rounded-full mb-4 inline-block">100% बायो-स्टिम्युुलंट | सेंद्रिय खत</span>
-            <h2 id="hero-title" class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-                व्यवसायात वेडे व्हा — मातीला बनवा बलवान!
-            </h2>
-            <p id="hero-subtitle" class="text-lg md:text-xl text-emerald-100 max-w-2xl mx-auto mb-6">
-                उत्पादनवाढीचा अत्यंत प्रभावी उपाय. हे रासायनिक खत नाही — जमिनीची सुपीकता वाढवा आणि भरघोस उत्पादन घ्या.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
-                <a href="#calculator" class="bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold px-6 py-3 rounded-lg shadow-lg text-center transition">
-                    <i class="fa-solid fa-calculator mr-2"></i> <span lang-key="calcBtn">डोस कॅल्क्युलेटर</span>
-                </a>
-                <a href="https://wa.me/919673653056?text=नमस्कार!%20मला%20कड%20मल्टीप्लायर%20बद्दल%20माहिती%20हवी%20आहे." target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-lg shadow-lg text-center transition flex items-center justify-center">
-                    <i class="fa-brands fa-whatsapp text-xl mr-2"></i> <span lang-key="waBtn">व्हॉट्सॲपवर संपर्क करा</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CREATOR / FOUNDER SPOTLIGHT SECTION -->
-    <section class="py-12 bg-white px-4 border-b">
-        <div class="max-w-4xl mx-auto bg-emerald-50 rounded-2xl p-6 md:p-10 shadow-md border border-emerald-100">
-            <div class="text-center mb-8">
-                <span class="text-xs uppercase font-bold tracking-widest text-emerald-700 bg-emerald-200 px-3 py-1 rounded-full">
-                    Creator Spotlight / संकल्पना आणि निर्मिती
-                </span>
-                <h3 class="text-2xl md:text-3xl font-bold text-emerald-900 mt-3">
-                    भेटा या उत्पादनाच्या निर्मात्याला
-                </h3>
-            </div>
-
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <!-- PHOTO CONTAINER (YOUR IMAGE GOES HERE) -->
-                <div class="flex-shrink-0 text-center">
-                    <div class="relative inline-block">
-                        <!-- REPLACE 'creator.jpg' WITH YOUR PERSON'S IMAGE FILE NAME -->
-                        <img id="founder-img" 
-                             src="creator.jpg" 
-                             alt="Product Creator / Inventor" 
-                             onerror="this.src='https://via.placeholder.com/250x250/059669/ffffff?text=Creator+Photo'"
-                             class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-emerald-600 shadow-xl mx-auto">
-                        <span class="absolute bottom-2 right-2 bg-amber-500 text-emerald-950 rounded-full p-2 text-xs font-bold shadow">
-                            <i class="fa-solid fa-award text-base"></i>
-                        </span>
+    <section class="hero-gradient text-white py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-sm font-medium">
+                        <i class="fa-solid fa-leaf text-amber-400"></i>
+                        <span data-mr="१००% अस्सल सेंद्रिय तंत्रज्ञान" data-en="100% Genuine Organic Technology">१००% अस्सल सेंद्रिय तंत्रज्ञान</span>
                     </div>
-                </div>
+                    
+                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
+                        <span data-mr="मातीला बनवा बलवान" data-en="Make Your Soil Stronger">मातीला बनवा बलवान</span> <br/>
+                        <span class="text-amber-400" data-mr="उत्पादनात घ्या विक्रमी वाढ!" data-en="Achieve Record Crop Yields!">उत्पादनात घ्या विक्रमी वाढ!</span>
+                    </h2>
+                    
+                    <p class="text-lg md:text-xl text-emerald-100 max-w-2xl mx-auto lg:mx-0 leading-relaxed" data-mr="पिकांच्या सशक्त वाढीसाठी आणि जमिनीची सुपीकता पुनर्स्थापित करण्यासाठी उत्तम सेंद्रिय मल्टीप्लायर." data-en="The ultimate organic multiplier for robust crop growth and restoring long-term soil fertility.">
+                        पिकांच्या सशक्त वाढीसाठी आणि जमिनीची सुपीकता पुनर्स्थापित करण्यासाठी उत्तम सेंद्रिय मल्टीप्लायर.
+                    </p>
 
-                <!-- CREATOR DETAILS & VISION -->
-                <div class="text-center md:text-left space-y-3">
-                    <h4 id="founder-name" class="text-2xl font-bold text-emerald-950">
-                        अक्षय चोभे
-                    </h4>
-                    <p id="founder-role" class="text-amber-600 font-semibold text-sm">
-                        संशोधक व संस्थापक — कड मल्टीप्लायर (Kad Multiplier)
-                    </p>
-                    <p id="founder-quote" class="text-gray-700 italic text-sm md:text-base leading-relaxed">
-                        "शेतकऱ्यांची माती बलवान करणे आणि पिकांचे उत्पादन वाढवणे हेच आमचे मुख्य उद्दिष्ट आहे. सेंद्रिय व शाश्वत शेतीच्या माध्यमातून प्रत्येक शेतकऱ्याचा विकास साधण्यासाठी आम्ही हे उत्पादन बाजारात आणले आहे."
-                    </p>
-                    <div class="pt-2">
-                        <a href="tel:9673653056" class="inline-flex items-center text-emerald-800 font-bold bg-white px-4 py-2 rounded-lg border border-emerald-300 hover:bg-emerald-100 transition text-sm">
-                            <i class="fa-solid fa-phone text-emerald-600 mr-2"></i> +91 9673653056
+                    <!-- Contact/Tagline Highlight -->
+                    <div class="bg-emerald-800/80 border border-amber-500/40 rounded-2xl p-4 max-w-lg mx-auto lg:mx-0 backdrop-blur-sm shadow-xl">
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+                            <div>
+                                <p class="text-xs text-amber-300 uppercase tracking-wider font-semibold" data-mr="संशोधक व निर्माते" data-en="Inventor & Founder">संशोधक व निर्माते</p>
+                                <p class="text-xl font-bold text-white">अक्षय चौबे (Akshay Chobe)</p>
+                                <p class="text-xs text-emerald-200" data-mr="मातीला बनवा बलवान | व्यवसायात वेडे व्हा" data-en="Strengthen Soil | Passionate in Agri Innovation">"मातीला बनवा बलवान | व्यवसायात वेडे व्हा"</p>
+                            </div>
+                            <a href="https://wa.me/919673653056?text=नमस्कार%20अक्षयजी,%20मला%20कड%20मल्टीप्लायरबद्दल%20अधिक%20माहिती%20हवी%20आहे." target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-lg">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span data-mr="संपर्क करा" data-en="Contact Now">संपर्क करा</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#order-section" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-emerald-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-amber-500/20 transition transform hover:-translate-y-0.5 text-center text-lg flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span data-mr="व्हॉट्सअ‍ॅपवर ऑर्डर करा" data-en="Order via WhatsApp">व्हॉट्सअ‍ॅपवर ऑर्डर करा</span>
+                        </a>
+                        <a href="tel:+919673653056" class="w-full sm:w-auto bg-emerald-800 hover:bg-emerald-700 text-white border border-emerald-600 font-semibold px-6 py-4 rounded-xl transition text-center text-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span>+91 9673653056</span>
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- KEY PRODUCT BENEFITS -->
-    <section class="py-12 bg-gray-50 px-4">
-        <div class="max-w-5xl mx-auto">
-            <h3 id="benefits-heading" class="text-2xl md:text-3xl font-bold text-center text-emerald-900 mb-8">
-                कड मल्टीप्लायर चे वैशिष्ट्ये व फायदे
-            </h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Benefit 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-600">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mb-4 text-xl font-bold">
-                        <i class="fa-solid fa-vial"></i>
+                <!-- Product Card Image Showcase -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative max-w-md w-full bg-emerald-800/60 border border-emerald-600/50 rounded-3xl p-6 backdrop-blur-md shadow-2xl">
+                        <div class="aspect-square bg-emerald-950/80 rounded-2xl overflow-hidden flex items-center justify-center relative border border-amber-500/30">
+                            <!-- Product Image or Placeholder -->
+                            <div class="text-center p-6 space-y-4">
+                                <i class="fa-solid fa-box-open text-6xl text-amber-400 animate-pulse"></i>
+                                <h3 class="text-2xl font-bold text-amber-300">कड मल्टीप्लायर Pack</h3>
+                                <p class="text-sm text-emerald-200" data-mr="पिकांच्या संपूर्ण पोषणासाठी आणि किडीपासून संरक्षणासाठी नैसर्गिक सेंद्रिय घटक." data-en="Natural organic solution for total crop nutrition and pest protection.">
+                                    पिकांच्या संपूर्ण पोषणासाठी आणि किडीपासून संरक्षणासाठी नैसर्गिक सेंद्रिय घटक.
+                                </p>
+                                <span class="inline-block bg-amber-500/20 text-amber-300 border border-amber-400/40 text-xs px-3 py-1 rounded-full font-semibold" data-mr="१००% रिझल्ट ओरिएंटेड" data-en="100% Result Oriented">
+                                    १००% रिझल्ट ओरिएंटेड
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="font-bold text-lg mb-2 text-emerald-900">हे रासायनिक खत नाही</h4>
-                    <p class="text-gray-600 text-sm">१००% बायो-स्टिम्युुलंट घटकांनी समृद्ध जे मातीतील सुपीकता नैसर्गिकरीत्या वाढवते.</p>
-                </div>
-
-                <!-- Benefit 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-600">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mb-4 text-xl font-bold">
-                        <i class="fa-solid fa-mountain text-xl"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-emerald-900">मातीला बनवा बलवान</h4>
-                    <p class="text-gray-600 text-sm">जमिनीची पाणी धरून ठेवण्याची क्षमता वाढवते आणि सूक्ष्मजीवांची वाढ वेगाने करते.</p>
-                </div>
-
-                <!-- Benefit 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-600">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mb-4 text-xl font-bold">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-emerald-900">उत्पादनवाढीचा प्रभावी उपाय</h4>
-                    <p class="text-gray-600 text-sm">पिकांच्या मुळांची वाढ मजबूत करून उत्पादनात लक्षणीय वाढ घडवून आणते.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DOSAGE CALCULATOR SECTION -->
-    <section id="calculator" class="py-12 bg-emerald-900 text-white px-4">
-        <div class="max-w-3xl mx-auto bg-emerald-800 p-6 md:p-8 rounded-2xl shadow-xl border border-emerald-700">
-            <h3 class="text-2xl font-bold text-center text-amber-400 mb-2">
-                <i class="fa-solid fa-calculator mr-2"></i> डोस व प्रमाण कॅल्क्युलेटर
-            </h3>
-            <p class="text-center text-emerald-200 text-sm mb-6">तुमच्या पिकासाठी आणि जमिनीसाठी योग्य प्रमाणात कड मल्टीप्लायर निवडा</p>
-
-            <div class="space-y-6">
-                <!-- Crop Type Selector -->
-                <div>
-                    <label class="block font-semibold mb-2 text-sm">पिकाचा प्रकार निवडा (Select Crop):</label>
-                    <select id="cropSelect" onchange="calculateDosage()" class="w-full bg-emerald-950 border border-emerald-600 rounded-lg p-3 text-white focus:outline-none focus:border-amber-400">
-                        <option value="sugarcane">ऊस (Sugarcane)</option>
-                        <option value="cotton">कापूस (Cotton)</option>
-                        <option value="vegetables">भाजीपाला (Vegetables)</option>
-                        <option value="fruits">फळबागा (Fruit Crops)</option>
-                        <option value="grains">धान्य व कडधान्ये (Grains/Pulses)</option>
-                    </select>
-                </div>
-
-                <!-- Acreage Slider -->
-                <div>
-                    <div class="flex justify-between items-center mb-2">
-                        <label class="font-semibold text-sm">जमिनीचे क्षेत्रफळ (Land Area):</label>
-                        <span class="bg-amber-500 text-emerald-950 font-bold px-3 py-1 rounded text-sm"><span id="acreValue">2</span> एकर (Acres)</span>
+    <section class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-emerald-50 to-amber-50/50 rounded-3xl p-6 md:p-10 border border-emerald-100 shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Creator Photo Frame -->
+                    <div class="md:col-span-5 lg:col-span-4 flex flex-col items-center">
+                        <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-slate-200">
+                            <img src="creator.jpg" 
+                                 alt="Akshay Chobe - Innovator & Farmer" 
+                                 class="w-full h-full object-cover" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x500/022c22/fbbf24?text=Akshay+Chobe\nFarmer+%26+Innovator';">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-emerald-950 via-emerald-950/70 to-transparent p-4 text-white text-center">
+                                <h4 class="text-xl font-bold text-amber-400">अक्षय चौबे</h4>
+                                <p class="text-xs text-emerald-200" data-mr="शेतकरी व सेंद्रिय संशोधक" data-en="Farmer & Agricultural Innovator">शेतकरी व सेंद्रिय संशोधक</p>
+                            </div>
+                        </div>
                     </div>
-                    <input type="range" id="acreRange" min="0.5" max="20" step="0.5" value="2" oninput="calculateDosage()" class="w-full accent-amber-400">
-                </div>
 
-                <!-- Result Box -->
-                <div class="bg-emerald-950 p-4 rounded-xl border border-amber-500/50 text-center">
-                    <p class="text-xs text-emerald-300 uppercase tracking-wider mb-1">अंदाजित आवश्यक डोस (Recommended Dosage)</p>
-                    <p id="dosageResult" class="text-2xl font-extrabold text-amber-400">2 किलोग्रॅम / Ltr</p>
-                </div>
+                    <!-- Creator Details -->
+                    <div class="md:col-span-7 lg:col-span-8 space-y-4 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span data-mr="अस्सल शेतकरी निर्मिती" data-en="Authentic Farmer Innovation">अस्सल शेतकरी निर्मिती</span>
+                        </div>
+                        <h3 class="text-2xl md:text-4xl font-bold text-slate-900" data-mr="निर्माते व संशोधक: अक्षय चौबे" data-en="Meet the Innovator: Akshay Chobe">
+                            निर्माते व संशोधक: अक्षय चौबे
+                        </h3>
+                        <p class="text-slate-600 text-base md:text-lg leading-relaxed" data-mr="शेतात प्रत्यक्ष प्रयोग करून आणि मातीचे आरोग्य टिकवण्याच्या ध्येयाने 'कड मल्टीप्लायर' ची निर्मिती केली आहे. रासायनिक खतांचा खर्च कमी करून पिकांची प्रतिकारशक्ती वाढवणे हा आमचा मुख्य उद्देश आहे." data-en="Developed directly through field testing with the mission to restore soil health. Our primary goal is to reduce chemical fertilizer costs while boosting natural crop immunity.">
+                            शेतात प्रत्यक्ष प्रयोग करून आणि मातीचे आरोग्य टिकवण्याच्या ध्येयाने 'कड मल्टीप्लायर' ची निर्मिती केली आहे. रासायनिक खतांचा खर्च कमी करून पिकांची प्रतिकारशक्ती वाढवणे हा आमचा मुख्य उद्देश आहे.
+                        </p>
 
-                <!-- Order via WhatsApp Button -->
-                <button onclick="orderCalculatedDosage()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 rounded-xl shadow-lg flex items-center justify-center space-x-2 transition">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    <span>हा डोस ऑर्डर करण्यासाठी व्हॉट्सॲप करा</span>
-                </button>
+                        <blockquote class="p-4 bg-white rounded-2xl border-l-4 border-amber-500 shadow-sm italic text-slate-700 text-base font-medium">
+                            <span data-mr="“मातीला बनवा बलवान | व्यवसायात वेडे व्हा — समृद्ध शेती हीच आमची ओळख!”" data-en="“Make your soil strong | Be passionate in business — Prosperous farming is our identity!”">
+                                “मातीला बनवा बलवान | व्यवसायात वेडे व्हा — समृद्ध शेती हीच आमची ओळख!”
+                            </span>
+                        </blockquote>
+
+                        <div class="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
+                            <a href="https://wa.me/919673653056?text=नमस्कार%20अक्षयजी,%20मला%20कड%20मल्टीप्लायरबद्दल%20बोलवायचे%20आहे." target="_blank" class="bg-emerald-900 hover:bg-emerald-800 text-white font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2 shadow">
+                                <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                                <span data-mr="थेट अक्षयजींशी संवाद साधा" data-en="Connect Directly with Akshay">थेट अक्षयजींशी संवाद साधा</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- INQUIRY FORM -->
-    <section class="py-12 bg-white px-4">
-        <div class="max-w-xl mx-auto">
-            <h3 class="text-2xl font-bold text-center text-emerald-900 mb-6">
-                थेट ऑर्डर अथवा चौकशी करा
-            </h3>
-            <form onsubmit="sendInquiry(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">तुमचे नाव (Your Name)</label>
-                    <input type="text" id="custName" required placeholder="नाव प्रविष्ट करा" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600">
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-mr="कड मल्टीप्लायरचे प्रमुख फायदे" data-en="Key Benefits of Kad Multiplier">
+                    कड मल्टीप्लायरचे प्रमुख फायदे
+                </h2>
+                <p class="text-slate-600 mt-2 text-lg" data-mr="तुमच्या पिकांना आणि जमिनीला मिळणारे अप्रतिम लाभ" data-en="Outstanding benefits for your crops and soil health">
+                    तुमच्या पिकांना आणि जमिनीला मिळणारे अप्रतिम लाभ
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit Card 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-800 text-2xl mb-6">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2" data-mr="जमिनीची सुपीकता व मऊपणा" data-en="Soil Fertility & Softness">
+                        जमिनीची सुपीकता व मऊपणा
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed" data-mr="कड मल्टीप्लायर जमिनीतील सूक्ष्मजीवांची वाढ करतो, ज्यामुळे जमीन भुसभुशीत आणि सुपीक बनते." data-en="Boosts beneficial soil microbes, keeping the soil soft, porous, and highly fertile over time.">
+                        कड मल्टीप्लायर जमिनीतील सूक्ष्मजीवांची वाढ करतो, ज्यामुळे जमीन भुसभुशीत आणि सुपीक बनते.
+                    </p>
                 </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">गाव / शहर (Village / City)</label>
-                    <input type="text" id="custCity" required placeholder="तुमचे गाव किंवा शहर" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600">
+
+                <!-- Benefit Card 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-700 text-2xl mb-6">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2" data-mr="मुळांची मजबूत वाढ" data-en="Strong Root Development">
+                        मुळांची मजबूत वाढ
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed" data-mr="पांढऱ्या मुळांची प्रचंड वाढ करून पिकांना सर्व पोषक तत्वे शोषून घेण्यास मदत करतो." data-en="Promotes rapid white root development enabling crops to absorb nutrients more effectively.">
+                        पांढऱ्या मुळांची प्रचंड वाढ करून पिकांना सर्व पोषक तत्वे शोषून घेण्यास मदत करतो.
+                    </p>
                 </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">संदेश / मागणी (Message)</label>
-                    <textarea id="custMsg" rows="3" placeholder="तुम्हाला किती पॅकेट/डोस हवे आहेत?" class="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600"></textarea>
+
+                <!-- Benefit Card 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-green-700 text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2" data-mr="रोगप्रतिकारक शक्ती" data-en="Pest & Disease Resistance">
+                        रोगप्रतिकारक शक्ती
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed" data-mr="पिकांना विविध कीड व रोगांपासून नैसर्गिक संरक्षण देऊन पिकांची गुणवत्ता सुधारतो." data-en="Provides natural resistance against common pests and diseases, enhancing overall yield quality.">
+                        पिकांना विविध कीड व रोगांपासून नैसर्गिक संरक्षण देऊन पिकांची गुणवत्ता सुधारतो.
+                    </p>
                 </div>
-                <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3 rounded-lg transition shadow">
-                    चौकशी पाठवा (Send Inquiry)
-                </button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-emerald-950 text-emerald-200 py-8 px-4 text-center text-sm border-t border-emerald-900">
-        <div class="max-w-5xl mx-auto space-y-3">
-            <p class="font-bold text-white text-base">अक्षय चोभे — कड मल्टीप्लायर (Kad Multiplier)</p>
-            <p>संपर्क: <a href="tel:9673653056" class="text-amber-400 font-bold underline">9673653056</a></p>
-            <p class="text-xs text-emerald-400">© 2026 Kad Multiplier. All Rights Reserved.</p>
+    <section id="order-section" class="py-16 bg-emerald-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-emerald-950/80 rounded-3xl p-6 sm:p-10 border border-emerald-700/50 shadow-2xl">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold mb-3">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span data-mr="थेट व्हॉट्सअ‍ॅप ऑर्डर" data-en="Direct WhatsApp Order">थेट व्हॉट्सअ‍ॅप ऑर्डर</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-white" data-mr="कड मल्टीप्लायर मागवण्यासाठी फॉर्म भरा" data-en="Order Kad Multiplier via WhatsApp">
+                        कड मल्टीप्लायर मागवण्यासाठी फॉर्म भरा
+                    </h2>
+                    <p class="text-emerald-200 text-sm sm:text-base mt-2" data-mr="खालील माहिती भरा आणि थेट व्हॉट्सअ‍ॅपवर मेसेज पाठवा." data-en="Fill the details below to generate a direct order message on WhatsApp.">
+                        खालील माहिती भरा आणि थेट व्हॉट्सअ‍‍ॅपवर मेसेज पाठवा.
+                    </p>
+                </div>
+
+                <!-- Order Form -->
+                <form id="whatsapp-order-form" onsubmit="sendWhatsAppOrder(event)" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <!-- Name -->
+                        <div>
+                            <label class="block text-sm font-semibold text-emerald-200 mb-1" data-mr="तुमचे नाव *" data-en="Your Name *">तुमचे नाव *</label>
+                            <input type="text" id="farmer-name" required placeholder="उदा. रमेश पाटील" class="w-full bg-emerald-900/90 border border-emerald-700 rounded-xl px-4 py-3 text-white placeholder-emerald-400 focus:outline-none focus:border-amber-400">
+                        </div>
+                        <!-- Phone -->
+                        <div>
+                            <label class="block text-sm font-semibold text-emerald-200 mb-1" data-mr="मोबाईल नंबर *" data-en="Mobile Number *">मोबाईल नंबर *</label>
+                            <input type="tel" id="farmer-phone" required placeholder="98XXXXXXXX" class="w-full bg-emerald-900/90 border border-emerald-700 rounded-xl px-4 py-3 text-white placeholder-emerald-400 focus:outline-none focus:border-amber-400">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <!-- Crop Type -->
+                        <div>
+                            <label class="block text-sm font-semibold text-emerald-200 mb-1" data-mr="पिकाचे नाव" data-en="Crop Name">पिकाचे नाव</label>
+                            <input type="text" id="farmer-crop" placeholder="उदा. ऊस / कापूस / सोयाबीन" class="w-full bg-emerald-900/90 border border-emerald-700 rounded-xl px-4 py-3 text-white placeholder-emerald-400 focus:outline-none focus:border-amber-400">
+                        </div>
+                        <!-- Location/Village -->
+                        <div>
+                            <label class="block text-sm font-semibold text-emerald-200 mb-1" data-mr="गाव / जिल्हा *" data-en="Village / District *">गाव / जिल्हा *</label>
+                            <input type="text" id="farmer-location" required placeholder="उदा. औरंगाबाद" class="w-full bg-emerald-900/90 border border-emerald-700 rounded-xl px-4 py-3 text-white placeholder-emerald-400 focus:outline-none focus:border-amber-400">
+                        </div>
+                    </div>
+
+                    <!-- Additional Message -->
+                    <div>
+                        <label class="block text-sm font-semibold text-emerald-200 mb-1" data-mr="इतर प्रश्न किंवा संदेश" data-en="Additional Message / Query">इतर प्रश्न किंवा संदेश</label>
+                        <textarea id="farmer-message" rows="3" placeholder="उदा. मला ५ किलो कड मल्टीप्लायर हवे आहे..." class="w-full bg-emerald-900/90 border border-emerald-700 rounded-xl px-4 py-3 text-white placeholder-emerald-400 focus:outline-none focus:border-amber-400"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition text-lg flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span data-mr="व्हॉट्सअ‍‍ॅपवर मेसेज पाठवा" data-en="Send Order via WhatsApp">व्हॉट्सअ‍ॅपवर मेसेज पाठवा</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-amber-400">कड मल्टीप्लायर (Kad Multiplier)</h3>
+                    <p class="text-sm text-slate-400 mt-1" data-mr="अक्षय चौबे | संपर्क: +91 9673653056" data-en="Akshay Chobe | Contact: +91 9673653056">
+                        अक्षय चौबे | संपर्क: +91 9673653056
+                    </p>
+                    <p class="text-xs text-slate-500 mt-0.5">"मातीला बनवा बलवान | व्यवसायात वेडे व्हा"</p>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="tel:+919673653056" class="w-12 h-12 bg-slate-800 hover:bg-slate-700 text-amber-400 rounded-full flex items-center justify-center text-xl transition border border-slate-700">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/919673653056" target="_blank" class="w-12 h-12 bg-slate-800 hover:bg-slate-700 text-green-400 rounded-full flex items-center justify-center text-xl transition border border-slate-700">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; <script>document.write(new Date().getFullYear())</script> Kad Multiplier. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
-    <!-- MOBILE STICKY BOTTOM BAR -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex justify-around items-center md:hidden z-50 shadow-2xl">
-        <a href="tel:9673653056" class="flex-1 bg-emerald-700 text-white text-center py-2.5 rounded-lg font-bold text-sm mr-2 flex items-center justify-center">
-            <i class="fa-solid fa-phone mr-2"></i> कॉल करा
+    <div class="fixed bottom-0 inset-x-0 z-40 bg-emerald-950/95 backdrop-blur-md border-t border-emerald-800 p-2.5 md:hidden flex items-center gap-3 shadow-2xl">
+        <a href="tel:+919673653056" class="flex-1 bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-sm border border-slate-700">
+            <i class="fa-solid fa-phone text-base"></i>
+            <span>कॉल करा</span>
         </a>
-        <a href="https://wa.me/919673653056?text=नमस्कार!%20मला%20कड%20मल्टीप्लायर%20ची%20माहिती%20हवी%20आहे." target="_blank" class="flex-1 bg-green-600 text-white text-center py-2.5 rounded-lg font-bold text-sm flex items-center justify-center">
-            <i class="fa-brands fa-whatsapp text-lg mr-2"></i> व्हॉट्सॲप
+        <a href="https://wa.me/919673653056?text=नमस्कार%20अक्षयजी,%20मला%20कड%20मल्टीप्लायरबद्दल%20माहिती%20हवी%20आहे." target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-sm shadow-lg">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>व्हॉट्सअ‍ॅप</span>
         </a>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
     <script>
         let currentLang = 'mr';
 
         function toggleLanguage() {
-            const btn = document.getElementById('langBtn');
-            if (currentLang === 'mr') {
-                currentLang = 'en';
-                btn.innerText = '🌐 मराठी';
-                document.getElementById('hero-title').innerText = "Be Passionate in Business — Make Your Soil Strong!";
-                document.getElementById('hero-subtitle').innerText = "An effective solution for crop yield booster. This is not a chemical fertilizer — enrich your soil health naturally.";
-                document.getElementById('founder-name').innerText = "Akshay Chobe";
-                document.getElementById('founder-role').innerText = "Founder & Agricultural Innovator — Kad Multiplier";
-                document.getElementById('founder-quote').innerText = '"Our core objective is to strengthen farmers\' soil and boost crop output organically. We created this product to ensure sustainable agricultural progress for every farmer."';
-                document.getElementById('benefits-heading').innerText = "Features & Benefits of Kad Multiplier";
-            } else {
-                currentLang = 'mr';
-                btn.innerText = '🌐 English';
-                document.getElementById('hero-title').innerText = "व्यवसायात वेडे व्हा — मातीला बनवा बलवान!";
-                document.getElementById('hero-subtitle').innerText = "उत्पादनवाढीचा अत्यंत प्रभावी उपाय. हे रासायनिक खत नाही — जमिनीची सुपीकता वाढवा आणि भरघोस उत्पादन घ्या.";
-                document.getElementById('founder-name').innerText = "अक्षय चोभे";
-                document.getElementById('founder-role').innerText = "संशोधक व संस्थापक — कड मल्टीप्लायर (Kad Multiplier)";
-                document.getElementById('founder-quote').innerText = '"शेतकऱ्यांची माती बलवान करणे आणि पिकांचे उत्पादन वाढवणे हेच आमचे मुख्य उद्दिष्ट आहे. सेंद्रिय व शाश्वत शेतीच्या माध्यमातून प्रत्येक शेतकऱ्याचा विकास साधण्यासाठी आम्ही हे उत्पादन बाजारात आणले आहे."';
-                document.getElementById('benefits-heading').innerText = "कड मल्टीप्लायर चे वैशिष्ट्ये व फायदे";
-            }
+            currentLang = currentLang === 'mr' ? 'en' : 'mr';
+            document.getElementById('lang-btn-text').textContent = currentLang === 'mr' ? 'English' : 'मराठी';
+            
+            // Toggle text attributes
+            document.querySelectorAll('[data-mr]').forEach(el => {
+                if (currentLang === 'en') {
+                    el.textContent = el.getAttribute('data-en');
+                } else {
+                    el.textContent = el.getAttribute('data-mr');
+                }
+            });
         }
 
-        function calculateDosage() {
-            const acres = parseFloat(document.getElementById('acreRange').value);
-            document.getElementById('acreValue').innerText = acres;
-            const dosageKg = acres * 1.5;
-            document.getElementById('dosageResult').innerText = `${dosageKg} किलोग्रॅम / Ltr (Kg/Ltr)`;
-        }
+        function sendWhatsAppOrder(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('farmer-name').value;
+            const phone = document.getElementById('farmer-phone').value;
+            const crop = document.getElementById('farmer-crop').value || 'सांगितले नाही';
+            const location = document.getElementById('farmer-location').value;
+            const message = document.getElementById('farmer-message').value || 'काही नाही';
 
-        function orderCalculatedDosage() {
-            const crop = document.getElementById('cropSelect').value;
-            const acres = document.getElementById('acreRange').value;
-            const dosage = document.getElementById('dosageResult').innerText;
-            const text = encodeURIComponent(`नमस्कार! माझ्याकडे ${acres} एकर जमीन असून पीक: ${crop} आहे. कड मल्टीप्लायर आवश्यक डोस: ${dosage}. मला हे ऑर्डर करायचे आहे.`);
-            window.open(`https://wa.me/919673653056?text=${text}`, '_blank');
-        }
+            const text = `*नवीन कड मल्टीप्लायर मागणी (Order Inquiry)*%0A%0A` +
+                         `*नाव:* ${encodeURIComponent(name)}%0A` +
+                         `*मोबाईल:* ${encodeURIComponent(phone)}%0A` +
+                         `*पिकाचे नाव:* ${encodeURIComponent(crop)}%0A` +
+                         `*गाव/जिल्हा:* ${encodeURIComponent(location)}%0A` +
+                         `*संदेश:* ${encodeURIComponent(message)}`;
 
-        function sendInquiry(e) {
-            e.preventDefault();
-            const name = document.getElementById('custName').value;
-            const city = document.getElementById('custCity').value;
-            const msg = document.getElementById('custMsg').value;
-            const text = encodeURIComponent(`नमस्कार, माझे नाव ${name} (गाव: ${city}). \nमाझा संदेश: ${msg}`);
             window.open(`https://wa.me/919673653056?text=${text}`, '_blank');
         }
     </script>
